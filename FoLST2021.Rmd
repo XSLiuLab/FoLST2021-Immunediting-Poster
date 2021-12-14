@@ -1,0 +1,115 @@
+---
+main_topsize: 1 #percent coverage of the poster
+main_bottomsize: 1
+#ESSENTIALS
+title: ''
+poster_height: 35
+poster_width: 23
+author:
+  - name: Tao Wu
+    affil: 1, 2, 3
+    orcid: '0000-0002-8999-9628'
+  - name: Guangshuai Wang
+    affil: 1, 2, 3
+  - name: Xuan Wang
+    affil: 1, 2, 3
+  - name: Shixiang Wang
+    affil: 1, 2, 3
+  - name: Xue-Song Liu
+    affil: 1,4
+    orcid: '0000-0002-7736-0077'
+affiliation:
+  - num: 1
+    address: School of Life Science and Technology, ShanghaiTech University, Shanghai 201203, China
+  - num: 2
+    address: Shanghai Institute of Biochemistry and Cell Biology, Chinese Academy of Sciences, Shanghai, China
+  - num: 3
+    address: University of Chinese Academy of Sciences, Beijing, China
+  - num: 4
+    address: Corresponding Author
+main_findings:
+  - "**Quantification of neoantigen-mediated immunoediting in cancer evolution**"
+logoleft_name: Fig/shanghaitech_logo.png
+logocenter_name: Fig/liulab.png
+output: 
+  posterdown::posterdown_betterport:
+    self_contained: false
+    pandoc_args: --mathjax
+    number_sections: false
+bibliography: packages.bib
+link-citations: false
+knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'index.html')) })
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      tidy = FALSE,
+                      message = FALSE,
+                      fig.align = 'center',
+                      out.width = "100%")
+options(knitr.table.format = "html") 
+```
+
+# Abstract
+
+Immunoediting, which includes three temporally distinct stages, termed elimination, equilibrium, and escape, has been proposed to explain the interactions between cancer cells and the immune system during the evolution of cancer. However the status of immunoediting in cancer remain unclear, and the existence of neoantigen depletion signal in untreated cancer has been debated. Here we developed a distribution pattern based method for quantifying neoantigen mediated negative selection in cancer evolution. Our method provides a robust and reliable quantification for immunoediting signal in individual cancer patient. The prevalence of immunoediting signal in immunotherapy untreated cancer genome has been demonstrated with this method. Importantly, the elimination and escape stages of immunoediting can be quantified separately, tumor types with strong immunoediting-elimination tend to have weak immunoediting-escape signal, and vice versa. Quantified immunoediting-elimination signal predicts cancer immunotherapy clinical response. Immunoediting quantification provides an evolutional perspective for evaluating the immunogenicity of neoantigen, and reveals potential biomarker for cancer precision immunotherapy.
+
+# Results
+
+```{r, figure1, fig.cap='Conceptual framework for the quantification of elimination and escape phases of immunoediting.', out.width="80%"}
+knitr::include_graphics("Fig/Fig1.png")
+```
+
+```{r, figure2, fig.cap='Distribution pattern based method for the quantification of neoantigen mediated negative selection in cancer evolution.', out.width="80%"}
+knitr::include_graphics("Fig/Fig2.png")
+```
+
+```{r, figure3, fig.cap='Pan-cancer distributions and features of the quantified immunoediting signals (ESCCF and ESRNA).', out.width="100%"}
+knitr::include_graphics("Fig/Fig3.png")
+```
+
+```{r, figure4, fig.cap='Immunoediting-elimination signal (ESCCF) and neoantigen-mediated negative selection strength quantification.', out.width="100%"}
+knitr::include_graphics("Fig/Fig4.png")
+```
+
+```{r, figure5, fig.cap='Quantified immunoediting-elimination signal (ESCCF) predicts cancer immunotherapy clinical response.', out.width="100%"}
+knitr::include_graphics("Fig/Fig5.png")
+```
+
+# Conclusion
+
+- Developed a brand new method for reliably quantifying neoantigen mediated immunoediting in individual cancer patient.
+- With the new analysis framework, we demonstrate the pan-cancer existence of neoantigen mediated negative selection signal.
+- Elimination and escape stages of immunoediting can be quantified separately,
+tumor types with strong immunoediting-elimination tend to have weak immunoediting-escape signal, and vice versa.
+- Quantified immunoediting-elimination signal predicts cancer immunotherapy clinical response.
+
+# More
+
+You can scan QR code at bottom center to see online analysis report. All code and related data are published at <https://github.com/XSLiuLab/tumor-immunogenicity-score>.
+
+# Acknowledgement
+
+We thank the authors and participating patients of immunotherapy publications for providing the data for this analysis. Our gratitude is also extended to the TCGA project for making cancer genomics data available for analysis. Thank ShanghaiTech University High Performance Computing Public Service Platform for computing services. Thanks also to other members of Liu lab for helpful discussion. 
+
+# Recent works of our lab
+
+- He, Zaoke, Sun, Xiaoqin, Wang, Shixiang, et al. "Ggct (g-glutamyl cyclotransferase) plays an important role in erythrocyte antioxidant defense and red blood cell survival." **BRITISH JOURNAL OF HAEMATOLOGY** (2021).
+- Wang Shixiang, et al. "UCSCXenaShiny: An R/CRAN Package for Interactive Analysis of UCSC Xena Data." **BIOINFORMATICS** (2021).
+- Wang Shixiang, et al. "Copy number signature analysis tool and its application in prostate cancer reveals distinct mutational processes and clinical outcomes." **PLOS GENETICS** (2021).
+- He, Zaoke, Wu, Tao, Wang, Shixiang, et al. "Pan-cancer noncoding genomic analysis identifies functional CDC20 promoter mutation hotspots." **ISCIENCE** (2021).
+- Wang Shixiang, et al. "Sigflow: an automated and comprehensive pipeline for cancer genome mutational signature analysis." **BIOINFORMATICS** (2020).
+- Wang, Shixiang1, He, Zaoke, et al. "Can tumor mutational burden determine the most effective treatment for lung cancer patients?" **LUNG CANCER MANAGEMENT** (2019)
+- Wang, Shixiang, et al. "Antigen presentation and tumor immunogenicity in cancer immunotherapy response prediction." **eLife** (2019).
+- Wang, Shixiang, Li An Cowley, and Xue-Song Liu. "Sex Differences in Cancer Immunotherapy Efficacy, Biomarkers, and Therapeutic Strategy." **Molecules** 24.18 (2019): 3214.
+- He, Zaoke, et al. "Ras Downstream Effector GGCT Alleviates Oncogenic Stress." **iScience** 19 (2019): 256-266.
+- Wang, Shixiang, and Xuesong Liu. "The UCSCXenaTools R package: a toolkit for accessing genomics data from UCSC Xena platform, from cancer multi-omics to single-cell RNA-seq." **The Journal of Open Source Software** 4 (2019).
+- Wang, Shixiang, et al. "The predictive power of tumor mutational burden in lung cancer immunotherapy response is influenced by patients’ sex." **International journal of cancer** (2019).
+- Wang, Shixiang, et al. "APOBEC3B and APOBEC mutational signature as potential predictive markers for immunotherapy response in non-small cell lung cancer." **Oncogene** 37.29 (2018): 3924.
+
+***
+
+[©Cancer Biology Group](https://github.com/XSLiuLab/) 2019
+
+<small>Research group led by Xue-Song Liu in ShanghaiTech. University. Lab website is shown in QR code at bottom right.</small>
