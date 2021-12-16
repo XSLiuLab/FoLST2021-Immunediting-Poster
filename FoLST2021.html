@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+
+
+
+<title>Quantification of neoantigen-mediated immunoediting in cancer evolution</title>
+
+<script src="FoLST2021_files/header-attrs-2.11/header-attrs.js"></script>
+
+
+
+
+
+<style>
+@page {
+size: 23in 35in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0;
+font-size: 27px;
+width: 23in;
+height: 35in;
+padding: 0;
+text-align: justify;
+font-family: Palatino;
+}
+.poster_wrap {
+width: 23in;
+height: 35in;
+padding: 0cm;
+}
+.title_container {
+width: 23in;
+height: calc(35in * 0.15);
+overflow: hidden;
+background-color: #0b4545;
+border: 0 solid #0b4545;
+}
+.logo_left {
+float: left;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.logo_right {
+float: right;
+width: 10%;
+height: 100%;
+background-color: #0b4545;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.poster_title {
+text-align: center;
+position: relative;
+float: left;
+width: 80%;
+height: 100%;
+color: #FFFFFF;
+top: 50%;
+transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
+}
+#title {
+font-family: Palatino;
+}
+/* unvisited link */
+a:link {
+color: #cc0000;
+}
+.mybreak {
+  break-before: column;
+}
+/* visited link */
+a:visited {
+color: #cc0000;
+}
+
+/* mouse over link */
+a:hover {
+color: #cc0000;
+}
+
+/* selected link */
+a:active {
+color: #cc0000;
+}
+.poster_body {
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+-webkit-column-rule-width: 1mm;
+-moz-column-rule-width: 1mm;
+column-rule-width: 1mm;
+-webkit-column-rule-style: dashed;
+-moz-column-rule-style: dashed;
+column-rule-style: dashed;
+-webkit-column-rule-color: #0b4545;
+-moz-column-rule-color: #0b4545;
+column-rule-color: #0b4545;
+column-gap: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+height: 100%;
+color: #000000
+background-color: #ffffff;
+}
+.poster_title h1 {
+font-size: 60pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_body_wrap{
+width: calc(23in + 0 + 0);
+height: calc(35in * 0.83);
+padding-top: calc(35in * 0.005);
+padding-bottom: calc(35in * 0.01);
+background-color: #ffffff;
+}
+.poster_title h3 {
+color: #ffffff;
+font-size: 35pt;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+.poster_title h3 > sup {
+  font-size: 35pt;
+  margin-left: 0.02em;
+}
+.poster_title h5 {
+color: #FFFFFF;
+font-size: ;
+margin: 0;
+border: 0;
+font-weight: normal;
+}
+img {
+margin-top: 2cm;
+margin-bottom: 0;
+}
+.section {
+  padding: 0.2em;
+}
+.poster_body h1 {
+text-align: center;
+color: #FFFFFF;
+font-size: 28px;
+border: 2mm solid #0b4545;
+background-color: #0b4545;
+border-radius: 4mm 0mm;
+margin-top: 2mm;
+margin-bottom: 2mm;
+font-weight: normal;
+}
+.poster_body h2 {
+color: #000000;
+font-size: 40pt;
+padding-left: 4mm;
+font-weight: normal;
+}
+.span {
+width: 200%;
+}
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+/* align-items: center; */
+margin: auto;
+padding-left: 2cm;
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+.caption {
+font-size: 25pt;
+}
+.table caption {
+font-size: 25pt;
+padding-bottom: 3mm;
+
+}
+code {
+font-size: 1em;
+font-family: monospace;
+background-color: #00808024;
+color: #0b4545;
+padding: 1.2mm;
+border-radius: 2mm;
+}
+.poster_title code {
+font-size: 1em;
+}
+table {
+font-size: 40px;
+margin: auto;
+border-top: 3px solid #666;
+border-bottom: 3px solid #666;
+}
+table thead th {
+border-bottom: 3px solid #ddd;
+}
+td {
+padding: 8px;
+}
+th {
+padding: 15px;
+}
+caption {
+margin-bottom: 10px;
+}
+.poster_body p {
+margin-right: 4mm;
+margin-left: 4mm;
+margin-top: 6mm;
+margin-bottom: 10mm;
+}
+.poster_body ol {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+#ul {
+margin-right: 4mm;
+margin-left: 4mm;
+}
+.references p {
+font-size: 20pt;
+}
+.orcid img {
+  width: 1em;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+<div class="title_container">
+<!-- Left Logo  -->
+<div class="logo_left">
+</div>
+<!-- Poster Title -->
+<div class= "poster_title">
+<h1 id="title">Quantification of neoantigen-mediated immunoediting in cancer evolution</h1>
+<h3 id="author">Tao Wu<sup>1</sup>, Guangshuai Wang<sup>1</sup>, Xuan Wang<sup>1</sup>, Shixiang Wang<sup>1</sup>, Xue-Song Liu<sup>1, 2</sup></h3><br>
+<h5 id="affiliation"><sup>1</sup> School of Life Science and Technology, ShanghaiTech University, Shanghai 201203, China<br> <sup>2</sup> Corresponding Author</h5>
+</div>
+<!-- Right Logo  -->
+<div class="logo_right">
+</div>
+</div>
+
+<div class='poster_body_wrap'>
+<div class='poster_body'>
+<div id="abstract" class="section level1">
+<h1>Abstract</h1>
+<p>Immunoediting, which includes three temporally distinct stages, termed elimination, equilibrium, and escape, has been proposed to explain the interactions between cancer cells and the immune system during the evolution of cancer. However the status of immunoediting in cancer remain unclear, and the existence of neoantigen depletion signal in untreated cancer has been debated. Here we developed a distribution pattern based method for quantifying neoantigen mediated negative selection in cancer evolution. Our method provides a robust and reliable quantification for immunoediting signal in individual cancer patient. The prevalence of immunoediting signal in immunotherapy untreated cancer genome has been demonstrated with this method. Importantly, the elimination and escape stages of immunoediting can be quantified separately, tumor types with strong immunoediting-elimination tend to have weak immunoediting-escape signal, and vice versa. Quantified immunoediting-elimination signal predicts cancer immunotherapy clinical response. Immunoediting quantification provides an evolutional perspective for evaluating the immunogenicity of neoantigen, and reveals potential biomarker for cancer precision immunotherapy.</p>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figure1"></span>
+<img src="Fig/Fig1.png" alt="Conceptual framework for the quantification of elimination and escape phases of immunoediting." width="80%" />
+<p class="caption">
+Figure 1: Conceptual framework for the quantification of elimination and escape phases of immunoediting.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figure2"></span>
+<img src="Fig/Fig2.png" alt="Distribution pattern based method for the quantification of neoantigen mediated negative selection in cancer evolution." width="80%" />
+<p class="caption">
+Figure 2: Distribution pattern based method for the quantification of neoantigen mediated negative selection in cancer evolution.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figure3"></span>
+<img src="Fig/Fig3.png" alt="Pan-cancer distributions and features of the quantified immunoediting signals (ESCCF and ESRNA)." width="100%" />
+<p class="caption">
+Figure 3: Pan-cancer distributions and features of the quantified immunoediting signals (ESCCF and ESRNA).
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figure4"></span>
+<img src="Fig/Fig4.png" alt="Immunoediting-elimination signal (ESCCF) and neoantigen-mediated negative selection strength quantification." width="100%" />
+<p class="caption">
+Figure 4: Immunoediting-elimination signal (ESCCF) and neoantigen-mediated negative selection strength quantification.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:figure5"></span>
+<img src="Fig/Fig5.png" alt="Quantified immunoediting-elimination signal (ESCCF) predicts cancer immunotherapy clinical response." width="100%" />
+<p class="caption">
+Figure 5: Quantified immunoediting-elimination signal (ESCCF) predicts cancer immunotherapy clinical response.
+</p>
+</div>
+</div>
+<div id="conclusion" class="section level1">
+<h1>Conclusion</h1>
+<ul>
+<li>Developed a brand new method for reliably quantifying neoantigen mediated immunoediting in individual cancer patient.</li>
+<li>With the new analysis framework, we demonstrate the pan-cancer existence of neoantigen mediated negative selection signal.</li>
+<li>Elimination and escape stages of immunoediting can be quantified separately,
+tumor types with strong immunoediting-elimination tend to have weak immunoediting-escape signal, and vice versa.</li>
+<li>Quantified immunoediting-elimination signal predicts cancer immunotherapy clinical response.</li>
+</ul>
+</div>
+<div id="acknowledgement" class="section level1">
+<h1>Acknowledgement</h1>
+<p>We thank the authors and participating patients of immunotherapy publications for providing the data for this analysis. Our gratitude is also extended to the TCGA project for making cancer genomics data available for analysis. Thank ShanghaiTech University High Performance Computing Public Service Platform for computing services. Thanks also to other members of Liu lab for helpful discussion.</p>
+<hr />
+<p><a href="https://github.com/XSLiuLab/">©Cancer Biology Group</a> 2021</p>
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+</body>
+</html>
